@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "803d47fb-fd94-4244-b0a9-a56f566efe74",
+		"name": "Collection_2024",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39885699"
+	},
+	"item": [
+		{
+			"name": "1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"Кот Сириус\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{add_path}}/pet",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{add_path}}",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "petId",
+							"value": "9223372016900014966",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Кошка Белла",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Поела",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/{{add_path}}/pet",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{add_path}}",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "additionalMetadata",
+							"value": "Фото питомца ",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1efa77e4-4691-4530-b3a4-8f443697fa93"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/{{add_path}}/pet/{{petId}}/uploadImage",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{add_path}}",
+						"pet",
+						"{{petId}}",
+						"uploadImage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/9223372016900019095",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"9223372016900019095"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
